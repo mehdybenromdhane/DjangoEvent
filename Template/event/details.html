@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+
+
+{% block  content %}
+<div
+    class="jumbotron jumbotron-fluid text-center"
+    style="background-color: rgb(55, 52, 52)"
+  >
+    <div class="container py-5">
+      <h1 class="display-4 text-white">{{event.title}}</h1>
+      <p class="lead text-white">
+      {{event.description}}
+      </p>
+    </div>
+  </div>
+
+
+
+{% endblock %}
+{% block body %}
+
+<div class="card mx-5 my-5" style="width: 18rem">
+    <img src="{{event.image.url}}" class="card-img-top" alt="..." />
+
+    <div class="card-body">
+      <h5 class="card-title">{{event.title}}</h5>
+
+      <p class="card-text">{{event.description}}</p>
+
+      <a href=" " class="btn btn-warning">Update</a>
+
+      <a href=" " class="btn btn-danger">Delete</a>
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{event.evt_date}}</small>
+    </div>
+  </div>
+
+
+
+{% endblock %}
